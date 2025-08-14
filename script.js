@@ -16,7 +16,7 @@ document.getElementById('btnKonfeti').addEventListener('click', function() {
 
 // Efek ketik nama (opsional)
 const nama = document.getElementById('nama');
-const namaPacar = "Paula"; // Ganti dengan nama pacar
+const namaPacar = "Paula Erika Panjaitan"; // Ganti dengan nama pacar
 let i = 0;
 
 function ketik() {
