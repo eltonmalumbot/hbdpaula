@@ -1,4 +1,3 @@
-
 // Efek mengetik untuk pesan
 const pesanEl = document.getElementById("pesan");
 const pesanText = "Kamu adalah alasan senyumku setiap hari 💕";
@@ -16,8 +15,22 @@ setTimeout(typeWriter, 1000); // mulai setelah 1 detik
 // Tombol confetti + musik
 document.getElementById("btnConfetti").addEventListener("click", function() {
   const musik = document.getElementById("musik");
-  musik.play();
 
+  // Pastikan musik mulai dari awal & volume oke
+  musik.currentTime = 0;
+  musik.volume = 1.0;
+
+  // Mainkan musik
+  musik.play()
+    .then(() => {
+      console.log("Musik diputar 🎵");
+    })
+    .catch(err => {
+      console.error("Gagal memutar musik:", err);
+      alert("Browser memblokir musik. Coba klik lagi atau aktifkan suara.");
+    });
+
+  // Tembakkan confetti selama 2 detik
   let duration = 2 * 1000;
   let end = Date.now() + duration;
 
