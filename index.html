@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Paula ❤️</title>
+    <title>Happy Birthday</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <canvas id="confetti-canvas"></canvas>
-
-    <div class="container">
-        <h1 class="judul">Happy Birthday</h1>
-        <h2 class="nama">Paula Erika Panjaitan 🎉</h2>
-        <img src="assets/foto1.jpg" alt="Kita berdua" class="foto">
-        <p class="pesan">Terima kasih sudah membuat hidupku lebih berwarna.</p>
-        <p class="pesan">Aku mencintaimu lebih dari kata-kata yang bisa diungkapkan. ❤️</p>
-        <button id="btnKonfeti">💖 Klik untuk Merayakan 💖</button>
+    <div class="card">
+        <h1>Happy Birthday <span>Paula Erika Panjaitan!</span> 🎉</h1>
+        <img src="img/foto.jpg" alt="Foto Berdua" class="foto">
+        <p>Terima kasih sudah membuat hidupku lebih berwarna.</p>
+        <p>Aku mencintaimu lebih dari kata-kata yang bisa diungkapkan. ❤️</p>
+        <button id="confettiBtn">Klik untuk Konfeti!</button>
     </div>
 
-    <audio id="musik" src="assets/musik.mp3" preload="auto" loop></audio>
-
+    <audio id="bgm" src="audio/lagu.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
