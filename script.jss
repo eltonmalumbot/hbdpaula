@@ -1,3 +1,4 @@
+
 // Efek mengetik untuk pesan
 const pesanEl = document.getElementById("pesan");
 const pesanText = "Kamu adalah alasan senyumku setiap hari 💕";
