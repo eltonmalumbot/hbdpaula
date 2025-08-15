@@ -1,4 +1,3 @@
-// Fungsi main untuk memutar musik
 function playMusic() {
     const musik = document.getElementById('musik');
     musik.load();
@@ -7,7 +6,6 @@ function playMusic() {
         .catch(e => console.warn("Gagal memutar musik:", e));
 }
 
-// Fungsi untuk membuat konfeti
 function createConfetti() {
     const canvas = document.getElementById('confetti-canvas');
     const ctx = canvas.getContext('2d');
@@ -17,15 +15,14 @@ function createConfetti() {
 
     const pieces = [];
     const colors = [
-        '#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
-        '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
-        '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'
+        '#ff4b5c', '#ffb6b9', '#fae3d9', '#bbded6', '#8ac6d1',
+        '#f7b267', '#f79d65', '#f4845f', '#f27059', '#ff8fab'
     ];
 
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 200; i++) {
         pieces.push({
             x: centerX,
             y: centerY,
@@ -60,7 +57,7 @@ function createConfetti() {
 
             p.x += p.speedX;
             p.y += p.speedY;
-            p.speedY += 0.1; // gravitasi
+            p.speedY += 0.1;
             p.rotation += p.spin;
 
             if (p.y > canvas.height || p.x < 0 || p.x > canvas.width) {
@@ -77,13 +74,11 @@ function createConfetti() {
     update();
 }
 
-// Event listener untuk tombol
 document.getElementById('btnKonfeti').addEventListener('click', () => {
     playMusic();
     createConfetti();
 });
 
-// Resize canvas saat window di-resize
 window.addEventListener('resize', () => {
     const canvas = document.getElementById('confetti-canvas');
     canvas.width = window.innerWidth;
