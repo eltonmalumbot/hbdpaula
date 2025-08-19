@@ -54,3 +54,18 @@ body {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(210, 54, 105, 0.4);
 }
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  color: #e91e63; /* pink cerah */
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+
+.typewriter {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8em;
+  color: #e91e63;
+  min-height: 40px;
+}
